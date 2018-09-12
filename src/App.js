@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/Navbar/Navbar';
+
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
   render() {

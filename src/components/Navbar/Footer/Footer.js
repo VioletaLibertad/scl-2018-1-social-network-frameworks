@@ -1,19 +1,14 @@
-import React, { Component } from 'react';
-import { ButtonGroup } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react';
+import {Button} from 'react-materialize'
 
-class Footer extends Component {
-  render() {
-    return (
-      <div className="footer-btn">
-        <ButtonGroup>
-          <Button>Facebook</Button>
-          <Button>Google</Button>
-          <Button>Right</Button>
-        </ButtonGroup>
-      </div>
-    );
-  }
+const Footer = () => {
+  return (
+    <div className="footer-btn">
+        <Button><i class="fab fa-facebook-f"></i></Button>
+        <Button><i class="fab fa-twitter"></i></Button>
+        <Button><i class="fab fa-instagram"></i></Button>
+    </div>
+  );
 }
+
 export default Footer;
