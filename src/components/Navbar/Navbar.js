@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import Sidebar from 'react-sidebar';
-import Footer from './Footer/Footer'
+import UserInfo from './UserInfo/UserInfo';
+import NavbarList from './NavbarList/NavbarList';
+import Footer from './Footer/Footer';
+import './styles.css';
+import {Button} from 'react-materialize';
+import Header from '../Header/Header';
 
 const mql = window.matchMedia(`(min-width: 800px)`);
 
@@ -31,16 +36,17 @@ class Navbar extends Component {
   
   render() {
     return (
-      <Sidebar
-        sidebar={<b><Footer/></b>}
+      <div>
+        <Sidebar
+        sidebar={<b><UserInfo /><NavbarList /><Footer /></b>}
         open={this.state.sidebarOpen}
         docked={this.state.sidebarDocked}
         onSetOpen={this.onSetSidebarOpen}
-      >
-         <button onClick={() => this.onSetSidebarOpen(true)}>
-          Open sidebar
-        </button>
-      </Sidebar>
+        styles={{ sidebar: { background: "white" } }}>
+        <Button onClick={() => this.onSetSidebarOpen(true)}>Open sidebar</Button>
+        </Sidebar>
+        <Header />
+      </div>
     );
   }
 }
