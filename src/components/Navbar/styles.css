@@ -1,3 +1,54 @@
-.footer-btn {
-  
+.sidebar {
+  width: 250px!important;
+}
+
+.open-menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  border: none;
+  background: transparent;
+}
+
+.user-info {
+  height: 10vh;
+  padding: 30px;
+}
+
+.user-picture img {
+  border-radius: 100%;
+  height: 12vh;
+  float: left;
+}
+
+.header {
+  height: 15vh;
+  width: 100vw;
+  background-color: #81c784;
+  position: absolute;
+  top: 0;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 0 0 50% 50%;
+}
+
+.footer {
+  padding: 10px 5px 10px 15px;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer button {
+  background-color: #81c784;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80%!important;
+  }
 }
