@@ -1,9 +1,9 @@
 import React from 'react';
-import ListItem from './ListItem';
 import { Container } from 'react-grid-system';
+import ListItem from './ListItem';
 
 const NavbarList = () => {
-  const list = ['Muro', 'Perfil', 'Cerrar Sesión']
+  const list = ['Muro', 'Perfil', 'Cerrar Sesión'];
   return (
     <Container className="navbar-list">
       <ul>
@@ -13,6 +13,6 @@ const NavbarList = () => {
       </ul>
     </Container>
   );
-}
+};
 
 export default NavbarList;
