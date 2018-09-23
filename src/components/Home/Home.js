@@ -15,7 +15,7 @@ const Home = () => {
         <Row>
           <Header name='MURO' />
         </Row>
-        <Row>
+        <Row className="publications">
           <Publish />
         </Row>
       </Container>

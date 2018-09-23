@@ -42,7 +42,7 @@ class Publish extends Component {
 
   render() {
     return (
-      <Container>
+      <div>
         <Col md={12} className="publish-container">
           <form onSubmit={this.addNewMessage} className="publish-container">
             <textarea ref={(input) => this.textInput = input} className="materialize-textarea" placeholder="Comparte algo..." />
@@ -52,7 +52,7 @@ class Publish extends Component {
         <Col md={12} className="messages-container">
           {this.state.messages.map(element => <Messages creator={element.creator} text={element.text} />)}
         </Col>
-      </Container>
+      </div>
     );
   }
     
