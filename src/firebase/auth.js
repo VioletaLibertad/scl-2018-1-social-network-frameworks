@@ -1,6 +1,6 @@
 /* Defining Authentication Methods */
 
-import { auth } from './firebase';
+import auth from './firebase';
 
 // Sign up
 const doCreateUserWithEmailAndPassword = (email, password) => auth.createUserwithEmailAndPassword(email, password);

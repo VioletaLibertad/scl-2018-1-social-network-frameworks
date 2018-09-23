@@ -16,7 +16,11 @@
 }
 
 .publish-container {
-  padding-top: 20vh;
+  padding-top: 10vh;
+}
+
+.publish-container form {
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -25,3 +29,4 @@
     float: right;
   }
 }
+
