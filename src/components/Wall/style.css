@@ -1,0 +1,27 @@
+
+.wall {
+  width: 100%;
+}
+
+.header {
+  height: 15vh;
+  width: 100%;
+  background-color: #81c784;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 0 0 50% 50%;
+}
+
+.publish-container {
+  padding-top: 20vh;
+}
+
+@media (min-width: 768px) {
+  .wall {
+    width: 75%;
+    float: right;
+  }
+}

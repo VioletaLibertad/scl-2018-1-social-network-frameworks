@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import ProfilePicture from '../../../img/default-profile.png'
+import ProfilePicture from '../../../img/default-profile.png';
+import { Container, Row, Col } from 'react-grid-system';
 
 class UserInfo extends Component {
   render() {
     return (
-      <div className="user-info">
-        <div className="user-picture">
-          <img src={ProfilePicture} alt=""/>
-        </div>
-        <p>Nombre</p>
-        <a href="#">Ver perfil</a>
-      </div>
+      <Container className="user-info">
+        <Row>
+          <Col md={4} className="user-picture">
+            <img src={ProfilePicture} alt=""/>
+          </Col>
+          <Col md={8}>
+            <h5>NOMBRE</h5>
+          </Col>   
+        </Row>
+      </Container>
     );
   }
 };

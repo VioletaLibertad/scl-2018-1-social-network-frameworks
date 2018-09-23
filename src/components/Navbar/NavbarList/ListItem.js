@@ -4,7 +4,9 @@ import {Button} from 'react-materialize';
 const ListItem = (props) => {
   return (
     <div className="list-item">
-      <li>{props.name}</li>
+      <li>
+        <Button>{props.name}</Button>
+      </li>
     </div>
   );
 }

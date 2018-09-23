@@ -5,6 +5,7 @@ import NavbarList from './NavbarList/NavbarList';
 import Footer from './Footer/Footer';
 import './styles.css';
 import Header from '../Header/Header';
+import Wall from '../Wall/Wall';
 
 const mql = window.matchMedia(`(min-width: 800px)`);
 
@@ -37,7 +38,7 @@ class Navbar extends Component {
     return (
       <div>
         <Sidebar
-        sidebar={<b><UserInfo /><NavbarList /><Footer /></b>}
+        sidebar={<b><UserInfo /><br/><NavbarList /><Footer /></b>}
         open={this.state.sidebarOpen}
         docked={this.state.sidebarDocked}
         onSetOpen={this.onSetSidebarOpen}
@@ -45,7 +46,7 @@ class Navbar extends Component {
         styles={{ sidebar: { background: 'black', color: 'white', position: 'fixed', zIndex: 3, width: '250px' } }}>
         <button onClick={() => this.onSetSidebarOpen(true)} className="open-menu"><i class="fas fa-align-justify"></i></button>
         </Sidebar>
-        <Header />
+        <Wall />
       </div>
     );
   }
