@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button } from 'react-materialize';
 import { Row, Col } from 'react-grid-system';
 
@@ -45,15 +45,15 @@ const Messages  = (props) => {
           </Col>
           <Col md={3} offset={{ md: 6 }}>
             <Button>
-              <i class="fas fa-edit" />
+              <i className="fas fa-edit" />
             </Button>
             <Button>
-              <i class="fas fa-trash-alt" />
+              <i className="fas fa-trash-alt" />
             </Button>
           </Col>
         </Row>
       </Col>
     );
-  }
+  };
 
 export default Messages;
