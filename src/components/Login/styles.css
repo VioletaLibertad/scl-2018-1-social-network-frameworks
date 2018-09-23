@@ -6,6 +6,6 @@
 .mainContainer {
   height: 100vh;
   width: auto;
-  background-image: url('../../background.png');
+  background-image: url('../../img/background.png');
   background-size: cover;
 }
