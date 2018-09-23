@@ -14,11 +14,11 @@ class Publish extends Component {
       messages: [],
       showMessage: false
     };
-    this.addComment = this.addComment.bind(this);
+    this.addNewMessage = this.addNewMessage.bind(this);
   }
 
   //donde se recibe el evento
-  addComment(event) {
+  addNewMessage(event) {
     event.preventDefault();
     if (this.textInput.value === '') {
       return;
@@ -38,15 +38,13 @@ class Publish extends Component {
     });
 
     this.textInput.value = '';
-    console.log(this.state.messages);
-
   }
 
   render() {
     return (
       <Container>
         <Col md={12} className="publish-container">
-          <form onSubmit={this.addComment} className="publish-container">
+          <form onSubmit={this.addNewMessage} className="publish-container">
             <textarea ref={(input) => this.textInput = input} className="materialize-textarea" placeholder="Comparte algo..." />
             <Button type="submit">PUBLICAR</Button>
           </form>

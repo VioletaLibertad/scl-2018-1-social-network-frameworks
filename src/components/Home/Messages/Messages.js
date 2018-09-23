@@ -39,16 +39,16 @@ const Messages  = (props) => {
         <Row>
           <Col md={3}>
             <Button>
-              <i className="fas fa-heartbeat" />
+              <i className="fas fa-heartbeat post-btn" />
             </Button>
             <p>counter</p>
           </Col>
           <Col md={3} offset={{ md: 6 }}>
             <Button>
-              <i className="fas fa-edit" />
+              <i className="fas fa-edit post-btn" />
             </Button>
             <Button>
-              <i className="fas fa-trash-alt" />
+              <i className="fas fa-trash-alt post-btn" />
             </Button>
           </Col>
         </Row>

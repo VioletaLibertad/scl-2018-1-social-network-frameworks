@@ -23,6 +23,10 @@
   width: 100%;
 }
 
+.post-btn {
+  background-color: transparent;
+}
+
 @media (min-width: 768px) {
   .wall {
     width: 75%;
