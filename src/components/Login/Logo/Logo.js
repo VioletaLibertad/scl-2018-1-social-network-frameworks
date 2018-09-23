@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles.css';
-import logoApp from '../../../LOGO 0.png';
+import logoApp from '../../../img/LOGO 0.png';
 
 const Logo = () => {
   return (
