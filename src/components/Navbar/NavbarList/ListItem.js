@@ -1,14 +1,47 @@
 import React from 'react';
 import {Button} from 'react-materialize';
+import { BrowserRouter as Route, Link } from "react-router-dom";
+import Home from '../../Home/Home';
+import Profile from '../../Profile/Profile';
+import Login from '../../Login/Login';
+
 
 const ListItem = (props) => {
-  return (
-    <div className="list-item">
-      <li>
-        <Button>{props.name}</Button>
-      </li>
-    </div>
-  );
-}
+  if (props.name === 'Muro') {
+    return (
+      <div className="list-item">
+        <li>
+          <Button>
+            <Link to="/home" className="link">MURO</Link>
+            <Route exact path="/home" component={Home} />
+          </Button>
+        </li>
+      </div>
+    );
+  } else if (props.name === 'Perfil') {
+    return (
+      <div className="list-item">
+        <li>
+          <Button>
+            <Link to="/profile" className="link">PERFIL</Link>
+            <Route exact path="/profile" component={Profile} />
+          </Button>
+        </li>
+      </div>
+    );
+  } else if (props.name === 'Cerrar Sesión') {
+    // Falta cerrar sesión como tal, esto es solo de renderizado básico
+    return (
+      <div className="list-item">
+        <li>
+          <Button>
+            <Link to="/login" className="link">CERRAR SESIÓN</Link>
+            <Route exact path="/login" component={Login} />
+          </Button>
+        </li>
+      </div>
+    );
+  }
+};
 
 export default ListItem;
