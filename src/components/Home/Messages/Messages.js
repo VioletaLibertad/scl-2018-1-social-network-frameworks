@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-materialize';
 import { Row, Col } from 'react-grid-system';
 
 const Messages  = (props) => {
@@ -38,18 +37,18 @@ const Messages  = (props) => {
         </Row>
         <Row>
           <Col md={3}>
-            <Button>
-              <i className="fas fa-heartbeat post-btn" />
-            </Button>
+            <button type="button" className="post-btn">
+              <i className="fas fa-heartbeat" />
+            </button>
             <p>counter</p>
           </Col>
           <Col md={3} offset={{ md: 6 }}>
-            <Button>
-              <i className="fas fa-edit post-btn" />
-            </Button>
-            <Button>
-              <i className="fas fa-trash-alt post-btn" />
-            </Button>
+            <button type="button" className="post-btn">
+              <i className="fas fa-edit" />
+            </button>
+            <button type="button" className="post-btn">
+              <i className="fas fa-trash-alt" />
+            </button>
           </Col>
         </Row>
       </Col>
