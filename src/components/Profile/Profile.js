@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import firebase from "../../firebase";
 import { Container, Row } from 'react-grid-system';
+import { firebase } from "../../firebase/index";
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
+import './style.css';
 
 class Profile extends Component {
   constructor() {
@@ -13,9 +14,9 @@ class Profile extends Component {
     };
   }
 
-  updateInput (event) {
+  updateInput (e) {
     this.setState({
-      [event.target.name]: event.target.value
+      [e.target.name]: e.target.value
     });
   }
 
@@ -33,7 +34,7 @@ class Profile extends Component {
       fullname: '',
       email: ''
     });
-  };
+  }
 
   render() {
     return (
@@ -43,10 +44,10 @@ class Profile extends Component {
           <Row>
             <Header name='PERFIL' />
           </Row>
-          <Row>
+          <Row className="test">
             <form onSubmit={this.addUser}>
               <input type="text" name="fullname" placeholder="Full name" />
-              <input type="email" name="email" placeholder="Full name" onChange={this.updateInput} />
+              <input type="email" name="email" placeholder="Full name" />
               <button type="submit">Submit</button>
             </form>
           </Row>

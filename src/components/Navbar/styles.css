@@ -56,7 +56,7 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 70%!important;
+    width: 90%!important;
   }
   .open-menu {
     display: inline;
