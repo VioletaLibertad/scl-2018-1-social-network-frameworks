@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Container, Row } from 'react-grid-system';
 import Header from '../Header/Header';
-import { Container, Row, Col } from 'react-grid-system';
 import Publish from './Publish/Publish';
 import './style.css';
 // import firebase from '../../firebase/index';
@@ -20,7 +20,7 @@ const Home = () => {
         </Row>
       </Container>
     </div>
-  )
-}
+  );
+};
 
 export default Home;
