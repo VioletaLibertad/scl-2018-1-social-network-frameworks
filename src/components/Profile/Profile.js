@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import firebase from "./firebase";
+import firebase from "../../firebase";
 import { Container, Row } from 'react-grid-system';
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
@@ -19,6 +19,22 @@ class Profile extends Component {
     });
   }
 
+  addUser (e) {
+    e.preventDefault();
+    const db = firebase.firestore();
+    db.settings({
+      timestampsInSnapshots: true
+    });
+    const userRef = db.collection('users').add({
+      fullname: this.state.fullname,
+      email: this.state.email
+    }); 
+    this.setState({
+      fullname: '',
+      email: ''
+    });
+  };
+
   render() {
     return (
       <div>
@@ -28,7 +44,7 @@ class Profile extends Component {
             <Header name='PERFIL' />
           </Row>
           <Row>
-            <form>
+            <form onSubmit={this.addUser}>
               <input type="text" name="fullname" placeholder="Full name" />
               <input type="email" name="email" placeholder="Full name" onChange={this.updateInput} />
               <button type="submit">Submit</button>
