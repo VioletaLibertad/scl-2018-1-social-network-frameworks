@@ -36,13 +36,20 @@ class Navbar extends Component {
     return (
       <div>
         <Sidebar
-        sidebar={<b><UserInfo /><br/><NavbarList /><Footer /></b>}
-        open={this.state.sidebarOpen}
-        docked={this.state.sidebarDocked}
-        onSetOpen={this.onSetSidebarOpen}
-        sidebarClassName={'sidebar'}
-        styles={{ sidebar: { background: 'black', color: 'white', position: 'fixed', zIndex: 3, width: '250px' } }}>
-        <button onClick={() => this.onSetSidebarOpen(true)} className="open-menu"><i class="fas fa-align-justify"></i></button>
+          sidebar={(
+            <b>
+              <UserInfo />
+              <NavbarList />
+              <Footer />
+            </b>
+          )}
+          open={this.state.sidebarOpen}
+          docked={this.state.sidebarDocked}
+          onSetOpen={this.onSetSidebarOpen}
+          sidebarClassName="sidebar"
+          styles={{ sidebar: { background: 'black', color: 'white', position: 'fixed', zIndex: 3, width: '250px' } }}
+        >
+          <button type="button" onClick={() => this.onSetSidebarOpen(true)} className="open-menu"><i className="fas fa-align-justify" /></button>
         </Sidebar>
       </div>
     );

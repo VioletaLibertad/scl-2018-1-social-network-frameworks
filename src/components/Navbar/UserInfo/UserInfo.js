@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ProfilePicture from '../../../img/default-profile.png';
 import { Container, Row, Col } from 'react-grid-system';
+import ProfilePicture from '../../../img/default-profile.png';
 
 class UserInfo extends Component {
   render() {
@@ -8,7 +8,7 @@ class UserInfo extends Component {
       <Container className="user-info">
         <Row>
           <Col md={4} className="user-picture">
-            <img src={ProfilePicture} alt=""/>
+            <img src={ProfilePicture} alt="" />
           </Col>
           <Col md={8}>
             <h5>NOMBRE</h5>
@@ -17,7 +17,7 @@ class UserInfo extends Component {
       </Container>
     );
   }
-};
+}
 
 
 export default UserInfo;
