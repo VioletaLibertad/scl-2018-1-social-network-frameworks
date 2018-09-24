@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import firebase from "../../firebase";
 import { Container, Row } from 'react-grid-system';
+import { firebase } from "../../firebase";
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
 

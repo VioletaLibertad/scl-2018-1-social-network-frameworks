@@ -20,4 +20,5 @@ const auth = firebase.auth();
 
 export {
   auth,
+  firebase,
 };
