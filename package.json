@@ -2,6 +2,7 @@
   "name": "social-network-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sin-restricciones-react.firebaseapp.com/",
   "dependencies": {
     "@firebase/firestore": "^0.8.1",
     "@material-ui/core": "^3.0.3",
