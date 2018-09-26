@@ -1,21 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import withRouter from 'react-router-dom/withRouter';
+import NavLink from 'react-router-dom/NavLink';
 import LogoutButton from './Login/Logout/Logout';
 import * as routes from '../constants/routes';
+
 
 const Navigation = () => {
   return (
     <div>
       <ul>
-        <li><Link to={routes.LOGIN}>Login</Link></li>
-        <li><Link to={routes.LANDING}>Landing</Link></li>
-        <li><Link to={routes.HOME}>Home</Link></li>
-        <li><Link to={routes.REGISTER}>Register</Link></li>
-        <li><Link to={routes.PROFILE}>Profile</Link></li>
-        <li><LogoutButton /></li>
+        <li className="list-item">
+          <NavLink to={process.env.PUBLIC_URL + routes.LOGIN}>Login</NavLink>
+        </li>
+        <li className="list-item">
+          <NavLink to={process.env.PUBLIC_URL + routes.REGISTER}>Register</NavLink>
+        </li>
+        <li className="list-item">
+          <NavLink to={process.env.PUBLIC_URL + routes.HOME}>Home</NavLink>
+        </li>
+        <li className="list-item">
+          <NavLink to={process.env.PUBLIC_URL + routes.PROFILE}>Profile</NavLink>
+        </li>
+        <li className="list-item"><LogoutButton /></li>
       </ul>
     </div>
   );
 };
 
-export default Navigation;
+export default withRouter(Navigation);

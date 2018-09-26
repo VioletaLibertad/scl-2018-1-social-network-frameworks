@@ -1,9 +1,11 @@
 import React from 'react';
+import {Button} from 'react-materialize';
 import { auth } from '../../../firebase';
+
 
 const LogoutButton = () => {
   return (
-    <button type="button" onClick={auth.doSignOut}>Cerrar Sesión</button>
+    <Button type="button" onClick={auth.doSignOut}>Cerrar Sesión</Button>
   );
 };
 
