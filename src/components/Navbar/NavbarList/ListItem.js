@@ -9,37 +9,31 @@ import Login from '../../Login/Login';
 const ListItem = (props) => {
   if (props.name === 'Muro') {
     return (
-      <div className="list-item">
-        <li>
-          <Button>
-            <Link to="/home" className="link">MURO</Link>
-            <Route exact path="/home" component={Home} />
-          </Button>
-        </li>
-      </div>
+      <li className="list-item">
+        <Button>
+          <Link to="/home" className="link">MURO</Link>
+          <Route exact path="/home" component={Home} />
+        </Button>
+      </li>
     );
   } else if (props.name === 'Perfil') {
     return (
-      <div className="list-item">
-        <li>
-          <Button>
-            <Link to="/profile" className="link">PERFIL</Link>
-            <Route exact path="/profile" component={Profile} />
-          </Button>
-        </li>
-      </div>
+      <li className="list-item">
+        <Button>
+          <Link to="/profile" className="link">PERFIL</Link>
+          <Route exact path="/profile" component={Profile} />
+        </Button>
+      </li>
     );
   } else if (props.name === 'Cerrar Sesión') {
     // Falta cerrar sesión como tal, esto es solo de renderizado básico
     return (
-      <div className="list-item">
-        <li>
-          <Button>
-            <Link to="/login" className="link">CERRAR SESIÓN</Link>
-            <Route exact path="/login" component={Login} />
-          </Button>
-        </li>
-      </div>
+      <li className="list-item">
+        <Button>
+          <Link to="/login" className="link">CERRAR SESIÓN</Link>
+          <Route exact path="/login" component={Login} />
+        </Button>
+      </li>
     );
   }
 };

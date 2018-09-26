@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { Button } from 'react-materialize';
-import { Container, Col } from 'react-grid-system';
+import { Col } from 'react-grid-system';
 import Messages from '../Messages/Messages';
-import firebase from '../../../firebase/index';
-
-// const db = firebase.firestore();
-
+// import { auth, db } from '../../../firebase/index';
 
 class Publish extends Component {
   constructor() {
@@ -26,8 +23,19 @@ class Publish extends Component {
     let newMessage = {
       text: this.textInput.value,
       date: new Date(new Date().getTime()).toLocaleString(),
-      creator: ''
+      id: 0,
+      creator: 'Alguien',
+      likes: '0'
     };
+
+    // const currentUser = auth.currentUser;
+    // const newMessageKey = db.ref().child('messages').push().key;
+    // db.ref(`messages/${newMessageKey}`).set({
+    //   creator: currentUser,
+    //   creatorName: currentUser.displayName,
+    //   text: this.textInput.value,
+    //   counter: 0
+    // });
 
     this.setState((previousState) => {
       return {
@@ -49,7 +57,7 @@ class Publish extends Component {
           </form>
         </Col>
         <Col md={12} className="messages-container">
-          {this.state.messages.map(element => <Messages creator={element.creator} text={element.text} />)}
+          {this.state.messages.map(element => <Messages id={element.id + 1} counter={element.likes} creator={element.creator} text={element.text} />)}
         </Col>
       </div>
     );
