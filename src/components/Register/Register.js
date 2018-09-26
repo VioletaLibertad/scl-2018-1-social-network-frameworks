@@ -1,7 +1,8 @@
 // Basic imports
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { auth } from '../../../firebase/index';
+import { auth } from '../../firebase/index';
+import * as routes from '../../constants/routes';
 // Styling imports
 import { Container, Row, Col } from 'react-grid-system';
 import { Input, Button } from 'react-materialize';
@@ -39,7 +40,7 @@ class RegisterForm extends Component {
     .then(authUser => {
       // db.doCreateUser(authUser.user.uid, email)
       this.setState({ ...INITIAL_STATE });
-      history.push('../../Home');
+      history.push(routes.HOME);
     })
     .catch(error => {
       this.setState(byPropKey('error', error));
@@ -93,7 +94,7 @@ class RegisterForm extends Component {
 
 const SignUpLink = () => {
   <p>No tienes una cuenta? Regístrate acá:
-    <Link to={`../Register/Register.js`}>Registrarse</Link>
+    <Link to={routes.REGISTER}>Registrarse</Link>
   </p>
 }
 
