@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { auth } from '../../../firebase/index';
+import * as routes from '../../../constants/routes';
 // Styling imports
 import { Container, Row, Col } from 'react-grid-system';
 import { Input, Button } from 'react-materialize';
@@ -36,7 +37,7 @@ class LoginForm extends Component {
     auth.doSignInWithEmailAndPassword(email, password)
     .then(() => {
       this.setState({ ...INITIAL_STATE });
-      history.push('../../Home');
+      history.push(routes.HOME);
     })
     .catch(error => {
       this.setState(byPropKey('error', error));

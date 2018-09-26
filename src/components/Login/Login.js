@@ -9,7 +9,7 @@ const Login = () => {
       <Logo />
       <LoginForm />
     </div>
-  )
-}
+  );
+};
 
 export default Login;

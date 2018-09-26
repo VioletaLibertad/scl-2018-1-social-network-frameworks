@@ -9,4 +9,6 @@ export const doCreateUserWithEmailAndPassword = (email, password) => auth.create
 export const doSignInWithEmailAndPassword = (email, password) => auth.signInWithEmailAndPassword(email, password);
 
 // Sign out
-export const doSignOut = () => auth.signOut();
+export const doSignOut = () => auth.signOut().then(() => {
+  window.location = 'https://sin-restricciones-react.firebaseapp.com/';
+});
