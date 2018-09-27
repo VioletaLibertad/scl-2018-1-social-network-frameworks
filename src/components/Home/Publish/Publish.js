@@ -50,7 +50,7 @@ class Publish extends Component {
         messages: previousState.messages.concat(newMessage)
       };
     });  
-    console.log(db.getMessages);
+    // console.log(db.getMessages);
     this.textInput.value = '';
   }
 
@@ -64,6 +64,8 @@ class Publish extends Component {
           </form>
         </Col>
         <Col md={12} className="messages-container">
+          {this.state.messages.map(element => <Messages id={element.id + 1} counter={element.likes} creator={element.creator} text={element.text} />)
+          }
         </Col>
       </div>
     );
@@ -73,7 +75,7 @@ class Publish extends Component {
 
 export default Publish;
 
-// {db.getMessages.map(element => {
+// {this.state.messages.map(element => {
 //   <Messages id={element.id + 1} counter={element.val().likes} creator={element.val().creator} text={element.val().text} />;
 // })
 // }
