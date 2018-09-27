@@ -2,17 +2,25 @@ import React, { Component } from 'react';
 import { Button } from 'react-materialize';
 import { Col } from 'react-grid-system';
 import Messages from '../Messages/Messages';
-// import { auth, db } from '../../../firebase/index';
+import { auth, db } from '../../../firebase/index';
 
 class Publish extends Component {
   constructor() {
     super();
     this.state = { //guarda los elementos
-      messages: [],
-      showMessage: false
+      messages: []
     };
     this.addNewMessage = this.addNewMessage.bind(this);
   }
+
+  // componentDidMount() {
+  //   const currentMessages = db.getMessages();
+  //   if (currentMessages !== null) {
+  //     this.setState({
+  //       messages: currentMessages
+  //     });
+  //   }
+  // }
 
   addNewMessage(event) {
     event.preventDefault();
@@ -20,30 +28,29 @@ class Publish extends Component {
       return;
     }
 
+    // const currentUser = auth.currentUser;
     let newMessage = {
       text: this.textInput.value,
       date: new Date(new Date().getTime()).toLocaleString(),
       id: 0,
-      creator: 'Alguien',
+      creator: 'gyj',
       likes: '0'
     };
 
-    // const currentUser = auth.currentUser;
-    // const newMessageKey = db.ref().child('messages').push().key;
-    // db.ref(`messages/${newMessageKey}`).set({
-    //   creator: currentUser,
-    //   creatorName: currentUser.displayName,
-    //   text: this.textInput.value,
-    //   counter: 0
-    // });
-
-    this.setState((previousState) => {
-      return {
-        messages: previousState.messages.concat(newMessage),
-        showMessage: true
-      };
+    db.uploadMessage({
+      text: this.textInput.value,
+      date: new Date(new Date().getTime()).toLocaleString(),
+      id: 0,
+      creator: 'gyj',
+      likes: '0'
     });
 
+    this.setState(previousState => {
+      return {
+        messages: previousState.messages.concat(newMessage)
+      };
+    });  
+    // console.log(db.getMessages);
     this.textInput.value = '';
   }
 
@@ -57,7 +64,8 @@ class Publish extends Component {
           </form>
         </Col>
         <Col md={12} className="messages-container">
-          {this.state.messages.map(element => <Messages id={element.id + 1} counter={element.likes} creator={element.creator} text={element.text} />)}
+          {this.state.messages.map(element => <Messages id={element.id + 1} counter={element.likes} creator={element.creator} text={element.text} />)
+          }
         </Col>
       </div>
     );
@@ -66,3 +74,8 @@ class Publish extends Component {
 }
 
 export default Publish;
+
+// {this.state.messages.map(element => {
+//   <Messages id={element.id + 1} counter={element.val().likes} creator={element.val().creator} text={element.val().text} />;
+// })
+// }

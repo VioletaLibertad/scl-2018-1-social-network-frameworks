@@ -12,3 +12,5 @@ export const doSignInWithEmailAndPassword = (email, password) => auth.signInWith
 export const doSignOut = () => auth.signOut().then(() => {
   window.location = 'https://sin-restricciones-react.firebaseapp.com/';
 });
+
+export const user = auth.currentUser;

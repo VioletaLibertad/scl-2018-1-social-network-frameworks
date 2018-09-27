@@ -3,7 +3,6 @@ import { Container, Row } from 'react-grid-system';
 import Header from '../Header/Header';
 import Publish from './Publish/Publish';
 import './style.css';
-// import firebase from '../../firebase/index';
 import Navbar from '../Navbar/Navbar';
 
 
