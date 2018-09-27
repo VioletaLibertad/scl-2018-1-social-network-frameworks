@@ -8,17 +8,17 @@ import * as routes from '../constants/routes';
 const Navigation = () => {
   return (
     <div>
-      <ul>
-        <li className="list-item">
+      <ul className="navbarMenu">
+        <li className="list-item hide">
           <NavLink to={process.env.PUBLIC_URL + routes.LOGIN}>Login</NavLink>
         </li>
-        <li className="list-item">
+        <li className="list-item hide">
           <NavLink to={process.env.PUBLIC_URL + routes.REGISTER}>Register</NavLink>
         </li>
-        <li className="list-item">
+        <li className="list-item btn">
           <NavLink to={process.env.PUBLIC_URL + routes.HOME}>Home</NavLink>
         </li>
-        <li className="list-item">
+        <li className="list-item btn">
           <NavLink to={process.env.PUBLIC_URL + routes.PROFILE}>Profile</NavLink>
         </li>
         <li className="list-item"><LogoutButton /></li>
