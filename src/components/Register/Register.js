@@ -6,6 +6,8 @@ import * as routes from '../../constants/routes';
 // Styling imports
 import { Container, Row, Col } from 'react-grid-system';
 import { Input, Button } from 'react-materialize';
+import Header from '../Header/Header';
+import './styles.css';
 
 // Setting initial state of component
 const INITIAL_STATE = {
@@ -67,6 +69,9 @@ class RegisterForm extends Component {
       <div>
         <Container>
           <Row>
+            <Header name="REGISTRO" />
+          </Row>
+          <Row className="registerStyle">
             <Col sm={3} />
             <Col sm={6}>
               <form onSubmit={this.onSubmit}>
@@ -74,11 +79,13 @@ class RegisterForm extends Component {
 
               <Input value={email} onChange={event => this.setState(byPropKey('email', event.target.value))} type="email" label="Email" s={12} />
 
-              <Input value={passwordOne} onChange={event => this.setState(byPropKey('passwordOne', event.target.value))} type="password" label="Password" s={12} />
+              <Input value={passwordOne} onChange={event => this.setState(byPropKey('passwordOne', event.target.value))} type="password" label="Contraseña" s={12} />
 
-              <Input value={passwordTwo} onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))} type="password" label="Confirm Password" s={12} />
+              <Input value={passwordTwo} onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))} type="password" label="Confirmar Contraseña" s={12} />
 
-              <Button disabled={isInvalid} type="submit" waves='light'>Ingresar</Button>
+              <Link className="registerBtn" to={process.env.PUBLIC_URL + routes.LOGIN}>ATRÁS</Link>
+
+              <Button className="registerBtn" disabled={isInvalid} type="submit" waves='light'>Ingresar</Button>
 
               { error && <p>{error.message}</p> }
               </form>
@@ -92,9 +99,11 @@ class RegisterForm extends Component {
 }
 
 const SignUpLink = () => {
-  <p>No tienes una cuenta? Regístrate acá:
-    <Link to={routes.REGISTER}>Registrarse</Link>
+  return(
+  <p>No tienes una cuenta? Regístrate
+    <Link to={process.env.PUBLIC_URL + routes.REGISTER}> AQUÍ</Link>
   </p>
+  )
 }
 
 export default withRouter(RegisterForm);
