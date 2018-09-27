@@ -13,7 +13,7 @@ const Messages = (props) => {
       </Row>
       <Row>
         <Col md={12}>
-          <textarea key={props.id} disabled className="materialize-textarea" value={props.text} />
+          <textarea id={props.id} disabled className="materialize-textarea" value={props.text} />
         </Col>
       </Row>
       <Row>

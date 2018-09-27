@@ -14,34 +14,27 @@ class Publish extends Component {
   }
 
   // componentDidMount() {
-  //   const currentMessages = db.getMessages();
-  //   if (currentMessages !== null) {
-  //     this.setState({
-  //       messages: currentMessages
-  //     });
-  //   }
+    
   // }
-
+  
   addNewMessage(event) {
     event.preventDefault();
     if (this.textInput.value === '') {
       return;
     }
 
-    // const currentUser = auth.currentUser;
     let newMessage = {
       text: this.textInput.value,
       date: new Date(new Date().getTime()).toLocaleString(),
-      id: 0,
-      creator: 'gyj',
+      creator: auth.fbAuth.currentUser.displayName,
       likes: '0'
     };
 
-    db.uploadMessage({
+    const newMessageKey = db.fbDatabase.ref().child('messages').push().key;
+    db.fbDatabase.ref(`messages/${newMessageKey}`).set({
       text: this.textInput.value,
       date: new Date(new Date().getTime()).toLocaleString(),
-      id: 0,
-      creator: 'gyj',
+      creator: auth.fbAuth.currentUser.displayName,
       likes: '0'
     });
 
@@ -49,12 +42,40 @@ class Publish extends Component {
       return {
         messages: previousState.messages.concat(newMessage)
       };
-    });  
-    // console.log(db.getMessages);
+    });
+
     this.textInput.value = '';
   }
 
   render() {
+    db.fbDatabase.ref('messages/').on('child_added', (newMessage) => {
+      console.log(newMessage.val());
+      document.getElementById('message-div').innerHTML = `
+      <div class="messages">
+        <div className="creator-info col-md-12">
+          <img src={ProfilePicture} alt="" className="picture" />
+          <p>${newMessage.val().creator}</p>
+        </div>
+        <div className="col-md-12">
+          <textarea id=${newMessage.key} disabled className="materialize-textarea">${newMessage.val().text}</textarea>
+        </div>
+        <div class="col-md-3">
+          <button type="button" className="post-btn">
+            <i className="fas fa-heartbeat" />
+            <span>${newMessage.val().likes} </span>
+          </button>
+        </div>
+        <div class="col-md-3 offset-s6">
+          <button type="button" className="post-btn">
+            <i className="fas fa-edit" />
+          </button>
+          <button type="button" className="post-btn">
+            <i className="fas fa-trash-alt" />
+          </button>
+        </div>
+      </div>
+      `;
+    });
     return (
       <div>
         <Col md={12} className="publish-container">
@@ -63,10 +84,7 @@ class Publish extends Component {
             <Button type="submit">PUBLICAR</Button>
           </form>
         </Col>
-        <Col md={12} className="messages-container">
-          {this.state.messages.map(element => <Messages id={element.id + 1} counter={element.likes} creator={element.creator} text={element.text} />)
-          }
-        </Col>
+        <Col md={12} id="message-div" className="messages-container" />
       </div>
     );
   }
@@ -75,7 +93,5 @@ class Publish extends Component {
 
 export default Publish;
 
-// {this.state.messages.map(element => {
-//   <Messages id={element.id + 1} counter={element.val().likes} creator={element.val().creator} text={element.val().text} />;
-// })
+// {this.state.messages.map(element => <Messages id={element.id + 1} counter={element.likes} creator={element.creator} text={element.text} />)
 // }
