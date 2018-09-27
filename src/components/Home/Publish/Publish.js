@@ -44,11 +44,7 @@ class Publish extends Component {
       };
     });
 
-    this.textInput.value = '';
-  }
-
-  render() {
-    db.fbDatabase.ref('messages/').on('child_added', (newMessage) => {
+    db.fbDatabase.ref('messages/').once('child_added', (newMessage) => {
       console.log(newMessage.val());
       document.getElementById('message-div').innerHTML += `
       <div class="messages">
@@ -76,6 +72,11 @@ class Publish extends Component {
       </div>
       `;
     });
+
+    this.textInput.value = '';
+  }
+
+  render() {
     return (
       <div>
         <Col md={12} className="publish-container">
