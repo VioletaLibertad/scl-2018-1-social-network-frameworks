@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Row } from 'react-grid-system';
+import { Container, Row, Col } from 'react-grid-system';
+import { Input, Button } from 'react-materialize';
 import { firebase } from "../../firebase/index";
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
@@ -45,16 +46,25 @@ class Profile extends Component {
             <Header name='PERFIL' />
           </Row>
           <Row className="test">
-            <form onSubmit={this.addUser}>
-              <input type="text" name="fullname" placeholder="Full name" />
-              <input type="email" name="email" placeholder="Full name" />
-              <button type="submit">Submit</button>
-            </form>
+            <Col sm={3} />
+            <Col sm={6}>
+              <form onSubmit={this.addUser}>
+                <Input type="text" name="userName" label="Nombre de usuario" />
+                <Input s={6} label="Nombre completo" />
+                <Input type="email" name="email" label="Email" />
+                <Input type="password" name="password" label="Contraseña" />
+                <Button type="submit">Submit</Button>
+              </form>
+            </Col>
+            <Col sm={3} />
           </Row>
         </Container>
       </div>
-      );
-    }
-   }
+    );
+  }
+}
 
 export default Profile;
+
+
+              
