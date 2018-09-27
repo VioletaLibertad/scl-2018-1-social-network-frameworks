@@ -38,7 +38,6 @@ class RegisterForm extends Component {
 
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
     .then(authUser => {
-      // db.doCreateUser(authUser.user.uid, email)
       this.setState({ ...INITIAL_STATE });
       history.push(routes.HOME);
     })
