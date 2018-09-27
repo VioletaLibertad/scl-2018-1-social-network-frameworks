@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Sidebar from 'react-sidebar';
 import UserInfo from './UserInfo/UserInfo';
-import NavbarList from './NavbarList/NavbarList';
+import Navigation from '../Navigation';
 import Footer from './Footer/Footer';
 import './styles.css';
 
@@ -39,7 +39,7 @@ class Navbar extends Component {
           sidebar={(
             <b>
               <UserInfo />
-              <NavbarList />
+              <Navigation />
               <Footer />
             </b>
           )}
