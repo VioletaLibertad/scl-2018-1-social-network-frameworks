@@ -50,7 +50,7 @@ class Publish extends Component {
   render() {
     db.fbDatabase.ref('messages/').on('child_added', (newMessage) => {
       console.log(newMessage.val());
-      document.getElementById('message-div').innerHTML = `
+      document.getElementById('message-div').innerHTML += `
       <div class="messages">
         <div className="creator-info col-md-12">
           <img src={ProfilePicture} alt="" className="picture" />
