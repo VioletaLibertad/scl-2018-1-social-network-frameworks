@@ -4,7 +4,7 @@
   },
   "firestore": {
     "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
+    "indexes": "y"
   },
   "hosting": {
     "public": "build",
@@ -21,6 +21,6 @@
     ]
   },
   "storage": {
-    "rules": "y"
+    "rules": "storage.rules"
   }
 }
