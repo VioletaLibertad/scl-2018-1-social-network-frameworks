@@ -3,8 +3,13 @@ import { Row, Col } from 'react-grid-system';
 import ProfilePicture from '../../../img/default-profile.png';
 
 const Messages = (props) => {
+  let counter = 0;
+  // const likePost = () => {
+  //   counter++;
+  // };
+
   return (
-    <Col md={12} className="messages">
+    <Col md={12} className="messages" key={props.id}>
       <Row>
         <Col md={12} className="creator-info">
           <img src={ProfilePicture} alt="" className="picture" />
@@ -18,9 +23,9 @@ const Messages = (props) => {
       </Row>
       <Row>
         <Col md={3}>
-          <button type="button" className="post-btn">
+          <button type="button" className="post-btn" >
             <i className="fas fa-heartbeat" />
-            <span>{props.counter}</span>
+            <span>{counter}</span>
           </button>
         </Col>
         <Col md={3} offset={{ md: 6 }}>
