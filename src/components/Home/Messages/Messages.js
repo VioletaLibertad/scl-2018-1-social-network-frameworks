@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-grid-system';
 import ProfilePicture from '../../../img/default-profile.png';
+import Like from './Like';
 
 const Messages = (props) => {
   let counter = 0;
@@ -22,12 +23,7 @@ const Messages = (props) => {
         </Col>
       </Row>
       <Row>
-        <Col md={3}>
-          <button type="button" className="post-btn" >
-            <i className="fas fa-heartbeat" />
-            <span>{counter}</span>
-          </button>
-        </Col>
+        <Like />
         <Col md={3} offset={{ md: 6 }}>
           <button type="button" className="post-btn">
             <i className="fas fa-edit" />

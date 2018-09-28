@@ -64,6 +64,16 @@
   font-size: 20px;
 }
 
+.post-btn:hover {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.post-btn i:hover {
+  box-shadow: 4px 7px 26px -3px rgba(135,135,135,0.5);
+}
+
 @media (min-width: 768px) {
   .wall {
     width: 75%;

@@ -84,7 +84,7 @@ class Publish extends Component {
   }
 
   editPost() {
-
+      
   }
 
   deletePost(event) {
@@ -95,7 +95,7 @@ class Publish extends Component {
     //   const messageRef = db.fbDatabase.ref('messages').child(messageId);
     //   messageRef.remove();
     //   document.getElementById('messageDiv').removeChild(messageId);
-    // }
+    // }S
   }
 
   render() {
