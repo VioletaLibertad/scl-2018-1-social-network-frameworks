@@ -95,7 +95,7 @@ class Publish extends Component {
     //   const messageRef = db.fbDatabase.ref('messages').child(messageId);
     //   messageRef.remove();
     //   document.getElementById('messageDiv').removeChild(messageId);
-    // }
+    // }S
   }
 
   render() {
@@ -108,7 +108,7 @@ class Publish extends Component {
           </form>
         </Col>
         <Col md={12} id="messageDiv" className="messages-container">
-          {this.state.messages.map(element => <Messages text={element.text} creator={element.creator} counter={element.likes} id={element.messageId} />)}
+          {this.state.messages.map(element => <Messages text={element.text} date={element.date} creator={element.creator} counter={element.likes} id={element.messageId} />)}
         </Col>
       </div>
     );
