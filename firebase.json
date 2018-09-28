@@ -3,8 +3,8 @@
     "rules": "database.rules.json"
   },
   "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "y"
+    "rules": "y",
+    "indexes": "firestore.indexes.json"
   },
   "hosting": {
     "public": "build",

@@ -55,7 +55,6 @@ class Profile extends Component {
                 <Input type="text" name="userName" label="Nombre de usuario" />
                 <Input type="text" name="fullName" label="Nombre completo" />
                 <Input type="email" name="email" label="Email" />
-                <Input type="password" name="password" label="Contraseña" />
                 <Button type="submit">Submit</Button>
               </form>
             </Col>
