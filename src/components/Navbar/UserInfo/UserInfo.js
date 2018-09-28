@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import ProfilePicture from '../../../img/default-profile.png';
+import ProfilePicture from '../../../img/sofiademo.jpg';
+// import { auth } from '../../../firebase/index';
 
 const UserInfo = () => {
   return (
@@ -10,7 +11,7 @@ const UserInfo = () => {
           <img src={ProfilePicture} alt="" />
         </Col>
         <Col md={8}>
-          <h5>NOMBRE</h5>
+          <h5>Sofía</h5>
         </Col>   
       </Row>
     </Container>
