@@ -14,6 +14,7 @@
     "rules": {
         "semi": 2,
         "import/no-named-as-default": 0,
+        "react/destructuring-assignment": ["enabled", "never"],
         "react/jsx-filename-extension": [1, {
             "extensions": [".js", ".jsx"]
         }]

@@ -10,8 +10,9 @@ class Profile extends Component {
   constructor() {
     super();
     this.state = {
+      userName: '',
+      fullName: '',
       email: '',
-      fullname: ''
     };
   }
 
@@ -28,11 +29,13 @@ class Profile extends Component {
       timestampsInSnapshots: true
     });
     const userRef = db.collection('users').add({
-      fullname: this.state.fullname,
+      userName: this.state.userName,
+      fullName: this.state.fullName,
       email: this.state.email
     }); 
     this.setState({
-      fullname: '',
+      userName: '',
+      fullName: '',
       email: ''
     });
   }
@@ -50,7 +53,7 @@ class Profile extends Component {
             <Col sm={6}>
               <form onSubmit={this.addUser}>
                 <Input type="text" name="userName" label="Nombre de usuario" />
-                <Input s={6} label="Nombre completo" />
+                <Input type="text" name="fullName" label="Nombre completo" />
                 <Input type="email" name="email" label="Email" />
                 <Input type="password" name="password" label="Contraseña" />
                 <Button type="submit">Submit</Button>

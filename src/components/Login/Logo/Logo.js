@@ -7,7 +7,7 @@ const Logo = () => {
     <div>
       <img className="logoApp" alt="logoApp" src={logoApp} />
     </div>
-  )
-}
+  );
+};
 
 export default Logo;
