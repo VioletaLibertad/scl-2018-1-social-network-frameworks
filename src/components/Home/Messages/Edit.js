@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from 'react-materialize';
 import { Col } from 'react-grid-system';
 
 class Edit extends Component {
@@ -10,7 +9,7 @@ class Edit extends Component {
     };
   }
 
-  likePost(event) {
+  editPost(event) {
     event.target.style.color = 'red';
     this.setState({
       likes: this.state.likes + 1

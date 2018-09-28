@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-grid-system';
-import ProfilePicture from '../../../img/default-profile.png';
+import ProfilePicture from '../../../img/sofiademo.jpg';
 import Like from './Like';
 import Edit from './Edit';
 import Delete from './Delete';

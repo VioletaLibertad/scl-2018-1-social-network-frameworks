@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import ProfilePicture from '../../../img/default-profile.png';
+import ProfilePicture from '../../../img/sofiademo.jpg';
 // import { auth } from '../../../firebase/index';
 
 const UserInfo = () => {
