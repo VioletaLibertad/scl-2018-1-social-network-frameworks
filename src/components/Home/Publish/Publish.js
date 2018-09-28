@@ -46,9 +46,6 @@ class Publish extends Component {
       };
     });
 
-    this.textInput.value = '';
-  }
-
     // db.fbDatabase.ref('messages/').once('child_added', (newMessage) => {
     //   console.log(newMessage.val());
     //   document.getElementById('message-div').innerHTML += `
@@ -101,7 +98,6 @@ class Publish extends Component {
     // }S
   }
 
->>>>>>> 1d2dde9a52aa898a59a860a8efc0cb7abd170eb3
   render() {
     return (
       <div>

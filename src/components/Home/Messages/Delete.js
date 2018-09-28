@@ -12,9 +12,8 @@ class Delete extends Component {
     /* eslint no-restricted-globals: ["off", "location"] */
     if (confirm('¿Estás seguro de eliminar este mensaje?')) {
       event.stopPropagation();
-      const parent1 = event.target.parentNode.parentNode.parentNode;
-      const parent2 = parent1.parentNode;
-      document.getElementById('messageDiv').removeChild(parent2);
+      const parent = event.target.parentNode.parentNode.parentNode;
+      document.getElementById('messageDiv').removeChild(parent.parentNode);
     }
   }
 
