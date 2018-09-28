@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { Button } from 'react-materialize';
 import { Col } from 'react-grid-system';
 
-class Like extends Component {
+class Edit extends Component {
   constructor() {
     super();
     this.state = {
@@ -18,14 +19,11 @@ class Like extends Component {
 
   render() {
     return (
-      <Col md={3}>
-        <button className="post-btn">
-          <i id="heartBtn" onClick={this.likePost.bind(this)} className="fas fa-heartbeat" />
-        </button>
-        <span>{this.state.likes}</span>
-      </Col>
+      <button type="button" className="post-btn">
+      <i className="fas fa-edit" />
+      </button>
     );
   }
 }
 
-export default Like;
+export default Edit;
