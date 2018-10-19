@@ -2,6 +2,8 @@
 
 En el mundo moderno e interconectado en el que vivimos actualmente, es raro encontrar alguien que no conozca o sepa usar un computador o smartphone. La tecnología avanza a pasos agigantados cada día, y es necesario mantenerse al día con las últimas tendencias. Considerando nuestra labor como Programadoras es fundamental siempre estar aprendiendo y practicando las nuevas tecnologías que _la llevan_. En ese sentido incorporar a nuestra formación un _framework_ o _librería_ es un gran paso en nuetro aprendizaje. De eso precisamente se trata este proyecto. Rehacer la Red Social utilizando React. 
 
+Proyecto desarrollado para [Laboratoria](http://www.laboratoria.la/)
+
 ![sinrestricciones](https://user-images.githubusercontent.com/39275041/47226930-0eb47f80-d398-11e8-8e7a-de07adbad429.png)
 
 ### ¿Por qué React?
