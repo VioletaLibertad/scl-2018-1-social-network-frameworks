@@ -2,6 +2,8 @@
 
 En el mundo moderno e interconectado en el que vivimos actualmente, es raro encontrar alguien que no conozca o sepa usar un computador o smartphone. La tecnología avanza a pasos agigantados cada día, y es necesario mantenerse al día con las últimas tendencias. Considerando nuestra labor como Programadoras es fundamental siempre estar aprendiendo y practicando las nuevas tecnologías que _la llevan_. En ese sentido incorporar a nuestra formación un _framework_ o _librería_ es un gran paso en nuetro aprendizaje. De eso precisamente se trata este proyecto. Rehacer la Red Social utilizando React. 
 
+![sinrestricciones](https://user-images.githubusercontent.com/39275041/47226930-0eb47f80-d398-11e8-8e7a-de07adbad429.png)
+
 ### ¿Por qué React?
 
 Mucho se habla en internet sobre React, Angular o Vue, los principales frameworks y librerías de JavaScript disponibles en la actualidad. Cada uno tiene ventajas y desventajas, por lo que la preferencia de uno u otro pasa principalmente por una cosa de gusto personal y forma de programar. Nosotras preferimos usar React ya que consideramos que nuestras formas de pensar son mas libres, y React nos permite infinitas posibilidades ya que, al ser una librería, puede coexistir con otras librerías y convertirse en una interfaz muy eficiente para la creación de Single-Page Applications(SPAs). Esto, sumado a las ganas de perfeccionar nuestras habilidades con JavaScript, nos llevaron al camino del Señor React. :pray: 
